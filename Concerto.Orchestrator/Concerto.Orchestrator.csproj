@@ -16,12 +16,11 @@
         <PackageReference Include="EasyNetQ.Serialization.NewtonsoftJson" Version="7.2.0" />
         <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="8.0.1" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.16.1" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\Concerto.Coordinator\Concerto.Coordinator.csproj" />
-        <ProjectReference Include="..\Concerto.Mapping\Concerto.Mapping.csproj" />
     </ItemGroup>
 
     <ItemGroup>

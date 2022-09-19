@@ -1,4 +1,3 @@
-using AutoMapper;
 using Concerto.Coordinator.Attributes;
 using Concerto.Coordinator.Contracts;
 using Concerto.Coordinator.Extensions;
@@ -12,12 +11,10 @@ public class ImportProfileCompleteStateMachineTransitionExecutor
 	: IStateMachineTransitionExecutor<ImportProfileState, ImportProfileTrigger, ImportProfileResponse?>
 {
 	private readonly IBus bus;
-	private readonly IMapper mapper;
 
-	public ImportProfileCompleteStateMachineTransitionExecutor(IBus bus, IMapper mapper)
+	public ImportProfileCompleteStateMachineTransitionExecutor(IBus bus)
 	{
 		this.bus = bus;
-		this.mapper = mapper;
 	}
 
 	public Task<ImportProfileResponse?> ExecuteAsync(

@@ -1,6 +1,5 @@
 using System.Reflection;
 using Concerto.Coordinator.Contracts;
-using Concerto.Mapping.DependencyInjection;
 using Concerto.Orchestrator.DependencyInjection;
 using Concerto.Samples.Sagas.ImportProfile;
 using EasyNetQ;
@@ -25,7 +24,6 @@ public abstract class BaseCoordinatorTests
 		this.Container = new Container(cfg =>
 		{
 			cfg.IncludeRegistry(new OrchestratorRegistry(Assembly.GetAssembly(typeof(ImportProfileCoordinator))));
-			cfg.IncludeRegistry(new AutoMapperRegistry());
 
 			SetupServiceBus(cfg);
 		});

@@ -1,7 +1,6 @@
 using System.Reflection;
 using Concerto.Coordinator;
 using Concerto.Coordinator.Contracts;
-using Concerto.Mapping.DependencyInjection;
 using Concerto.Orchestrator.Settings;
 using Lamar;
 using Microsoft.Extensions.Configuration;
@@ -42,7 +41,6 @@ public class OrchestratorRegistry : ServiceRegistry
 
 		var serviceBusSettings = RegisterConfig<ServiceBusSettings>(configuration);
 		IncludeRegistry(new ServiceBusRegistry(ServiceLifetime.Scoped, serviceBusSettings!));
-		IncludeRegistry(new AutoMapperRegistry(ServiceLifetime.Scoped));
 	}
 
 	private static IConfiguration GetConfiguration()
